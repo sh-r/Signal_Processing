@@ -1,0 +1,10 @@
+clc;
+clear all;
+close all;
+syms t s;
+x1=heaviside(t)-heaviside(t-1);
+x2=heaviside(t-1)-heaviside(t-2);
+x1s=laplace(x1);
+x2s=laplace(x2);
+x3s=x1s.*x2s;
+x4=ilaplace(x3s);

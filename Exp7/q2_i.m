@@ -1,0 +1,13 @@
+clc;
+clear all;
+close all;
+syms t s;
+x1s=2/(s.*(s+1).*((s+2)^2));
+x1=ilaplace(x1s);
+display(x1);
+x2s=1/((s^2+s+1).*(s+2));
+x2=ilaplace(x2s);
+display(x2);
+x3s=2/(s.*(s+1).*(s+2));
+x3=ilaplace(x3s);
+display(x3);

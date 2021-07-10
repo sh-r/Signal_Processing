@@ -1,0 +1,11 @@
+clc;
+clear all;
+close all;
+x=[2,1,2,1];
+h=[1,2,3,4];
+X=fft(x);
+H=fft(h);
+Y=X.*H;
+y=ifft(Y);
+disp("circular convolution of x(n) and h(n) is= ");
+disp(y);
